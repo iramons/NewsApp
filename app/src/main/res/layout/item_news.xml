@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="br.com.newsapp.data.model.News" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_item"
+        style="@style/News.Item"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_hat"
+            style="@style/News.Item.TextView.Hat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Política" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/News.Item.TextView.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_hat"
+            tools:text="Antes de demissão, secretário de Covas enfrentou pressão por segurar gastos de secretarias" />
+
+        <TextView
+            android:id="@+id/tv_thin_line"
+            style="@style/News.Item.TextView.ThinLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title"
+            tools:text="Mauro Ricardo fez pastas segurarem orçamento para ano eleitoral, mas, com pandemia de covid-19, investimentos não foram feitos" />
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_thin_line"
+            tools:src="@drawable/photo_template" />
+
+
+        <TextView
+            android:id="@+id/tv_image_credit"
+            style="@style/News.Item.TextView.ImageCredits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_image"
+            tools:text="Marbet Ramon" />
+
+        <TextView
+            android:id="@+id/tv_credit"
+            style="@style/News.Item.TextView.Credits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_image_credit"
+            tools:text="Bruno Ribeiro, O Estadão de São Paulo" />
+
+        <TextView
+            android:id="@+id/tv_date_time_publish"
+            style="@style/Details.Item.TextView.PublishInfos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_credit"
+            tools:text="Hoje às 14h" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,191 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.NewsApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimary</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorSecondaryVariant">@color/white</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!-- Theme NO ActionBar -->
+    <style name="Theme.NewsApp.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.NewsApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.NewsApp.PopupOverlay" parent="Theme.AppCompat" />
+
+    <!-- InputLayout style -->
+    <style name="Widget.App.InputLayout.Default" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/colorPrimary</item>
+        <item name="boxStrokeErrorColor">@color/colorRedDark</item>
+        <item name="boxStrokeWidth">@dimen/stroke_width</item>
+        <item name="boxBackgroundColor">@android:color/transparent</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/corner_radius_small</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/corner_radius_small</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/corner_radius_small</item>
+        <item name="boxCornerRadiusTopStart">@dimen/corner_radius_small</item>
+        <item name="android:padding">@dimen/spacing_xsmall</item>
+    </style>
+
+    <style name="Login.TextInputLayout" parent="Widget.App.InputLayout.Default">
+        <item name="passwordToggleTint">@color/grayLight</item>
+        <item name="boxBackgroundColor">@null</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/corner_radius_large</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/corner_radius_large</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/corner_radius_large</item>
+        <item name="boxCornerRadiusTopStart">@dimen/corner_radius_large</item>
+    </style>
+
+    <!-- default button style -->
+    <style name="DefaultButton">
+        <item name="android:background">@drawable/button_rounded</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <!-- NEWS -->
+    <!-- News Item style -->
+    <style name="News.Item" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/spacing_middle</item>
+        <item name="android:layout_marginBottom">@dimen/spacing_middle</item>
+        <item name="android:paddingTop">@dimen/spacing_middle</item>
+        <item name="android:paddingBottom">@dimen/spacing_mlarge</item>
+        <item name="android:elevation">@dimen/very_small_elevation</item>
+    </style>
+
+    <!-- TextView News Item hat style -->
+    <style name="News.Item.TextView.Hat" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginStart">@dimen/text_margin</item>
+        <item name="android:layout_marginEnd">@dimen/text_margin</item>
+        <item name="android:paddingTop">@dimen/text_very_small_margin</item>
+        <item name="android:paddingBottom">@dimen/text_very_small_margin</item>
+    </style>
+
+    <!-- TextView News Item title style -->
+    <style name="News.Item.TextView.Title" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:layout_marginStart">@dimen/text_margin</item>
+        <item name="android:layout_marginEnd">@dimen/text_margin</item>
+        <item name="android:paddingBottom">@dimen/text_small_margin</item>
+    </style>
+
+    <!-- TextView News Item thin Line style -->
+    <style name="News.Item.TextView.ThinLine" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textStyle">normal</item>
+        <!--        <item name="android:textSize">@dimen/text_size_semi_medium</item>-->
+        <item name="android:layout_marginStart">@dimen/text_margin</item>
+        <item name="android:layout_marginEnd">@dimen/text_margin</item>
+        <item name="android:paddingBottom">@dimen/text_margin</item>
+        <item name="android:textColor">@color/labelSubtitle</item>
+    </style>
+
+    <!-- TextView News Item credits style -->
+    <style name="News.Item.TextView.Credits" parent="@style/TextAppearance.AppCompat">
+        <item name="android:layout_marginStart">@dimen/text_margin</item>
+        <item name="android:layout_marginEnd">@dimen/text_margin</item>
+        <item name="android:layout_marginTop">@dimen/text_very_small_margin</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/labelCredits</item>
+    </style>
+
+    <!-- TextView News Item credits style -->
+    <style name="News.Item.TextView.ImageCredits" parent="@style/TextAppearance.AppCompat">
+        <item name="android:layout_marginStart">@dimen/text_margin</item>
+        <item name="android:layout_marginEnd">@dimen/text_margin</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textColor">@color/labelCredits</item>
+    </style>
+
+    <!-- TextView News Item image credits style -->
+    <style name="News.Item.TextView.PublishInfos" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_marginStart">@dimen/text_margin</item>
+        <item name="android:layout_marginEnd">@dimen/text_margin</item>
+        <item name="android:paddingTop">@dimen/text_small_margin</item>
+        <item name="android:textColor">@color/labelCredits</item>
+    </style>
+
+
+    <!-- DETAILS -->
+    <style name="Details.Item" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/text_margin</item>
+        <item name="android:paddingBottom">@dimen/spacing_middle</item>
+        <item name="android:elevation">@dimen/very_small_elevation</item>
+    </style>
+
+    <!-- TextView Details Item title style -->
+    <style name="Details.Item.TextView.Title" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">@dimen/text_size_xlarge</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:layout_marginStart">@dimen/text_margin</item>
+        <item name="android:layout_marginEnd">@dimen/text_margin</item>
+        <item name="android:paddingBottom">@dimen/text_margin</item>
+    </style>
+
+    <!-- TextView Details Item thin Line style -->
+    <style name="Details.Item.TextView.ThinLine" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:layout_marginStart">@dimen/text_margin</item>
+        <item name="android:layout_marginEnd">@dimen/text_margin</item>
+        <item name="android:paddingBottom">@dimen/text_medium_margin</item>
+        <item name="android:textColor">@color/labelSubtitle</item>
+    </style>
+
+    <!-- TextView Details Item credits style -->
+    <style name="Details.Item.TextView.Credits" parent="@style/TextAppearance.AppCompat">
+        <item name="android:layout_marginStart">@dimen/text_margin</item>
+        <item name="android:layout_marginEnd">@dimen/text_margin</item>
+        <item name="android:layout_marginTop">@dimen/text_margin</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/labelCredits</item>
+    </style>
+
+    <!-- TextView Details Item credits image style -->
+    <style name="Details.Item.TextView.CreditsImage" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:layout_width">@dimen/zero_margin</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/spacing_medium</item>
+        <item name="android:layout_marginStart">@dimen/text_margin</item>
+        <item name="android:layout_marginEnd">@dimen/text_margin</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/labelCredits</item>
+    </style>
+
+    <!-- TextView Details Item image credits style -->
+    <style name="Details.Item.TextView.PublishInfos" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textStyle">normal</item>
+        <item name="android:paddingBottom">@dimen/spacing_mlarge</item>
+        <item name="android:textSize">@dimen/text_size_smaller</item>
+        <item name="android:layout_marginStart">@dimen/text_margin</item>
+        <item name="android:textColor">@color/labelCredits</item>
+    </style>
+
+
+</resources>
